@@ -1,0 +1,17 @@
+:3000
+
+log
+
+route {
+	encode zstd gzip
+
+	mercure {
+		# Le secret utilisé pour signer les JWT
+		publisher_jwt !ChangeMe!
+		subscriber_jwt !ChangeMe!
+		anonymous
+		subscriber_anonymous
+	}
+
+	respond "Mercure is running"
+}
